@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        .row {
+          padding: 50px;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        td {
+            font-weight: bold;
+        }
+        h1 {
+            color: rgb(0, 81, 255);
+            text-align: center;
+        } 
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+</head>
+<body>
+    <div class="container bg-light">
+        
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <h1 class="text-center">ITEMS YOU CONSUME DAILY</h1>
+                <div class="d-flex justify-content-center">
+                  <h5>Please enter the quantity for <b>each day</b></h5>
+                </div>
+                <table class="table table-borderless">
+                    <thead class="thead">
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Day</th>
+                            <th scope="col">Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Plastic Bottles</td>
+                            <td><input type="number" class="form-control-sm" style="border: none;" id="plastic-bottles" oninput="calculateYears('plastic-bottles', 'plastic-bottles-year')"></td>
+                            <td><span id="plastic-bottles-year">0</span></td>
+                        </tr>
+                        <tr>
+                            <td>Plastic Cups</td>
+                            <td><input type="number" class="form-control-sm" style="border: none;" id="plastic-cups" oninput="calculateYears('plastic-cups', 'plastic-cups-year', 50, 80)"></td>
+                            <td><span id="plastic-cups-year">0</span></td>
+                        </tr>
+                        <tr>
+                            <td>Straws</td>
+                            <td><input type="number" class="form-control-sm" style="border: none;" id="straws" oninput="calculateYears('straws', 'straws-year', 200)"></td>
+                            <td><span id="straws-year">0</span></td>
+                        </tr>
+                        <tr>
+                            <td>Cotton Swabs</td>
+                            <td><input type="number" class="form-control-sm" style="border: none;" id="cotton-swabs" oninput="calculateYears('cotton-swabs', 'cotton-swabs-year')"></td>
+                            <td><span id="cotton-swabs-year">0</span></td>
+                        </tr>
+                        <tr>
+                            <td>Cigarette Butts</td>
+                            <td><input type="number" class="form-control-sm" style="border: none;" id="cigarette-butts" oninput="calculateYears('cigarette-butts', 'cigarette-butts-year', 10, 12)"></td>
+                            <td><span id="cigarette-butts-year">0</span></td>
+                        </tr>
+                        <tr>
+                            <td>Plastic Resealable Bags</td>
+                            <td><input type="number" class="form-control-sm" style="border: none;" id="plastic-bags" oninput="calculateYears('plastic-bags', 'plastic-bags-year', 20, 30)"></td>
+                            <td><span id="plastic-bags-year">0</span></td>
+                        </tr>
+                        <tr>
+                            <td>Plastic Cling Wrap</td>
+                            <td><input type="number" class="form-control-sm" style="border: none;" id="cling-wrap" oninput="calculateYears('cling-wrap', 'cling-wrap-year', 20, 30)"></td>
+                            <td><span id="cling-wrap-year">0</span></td>
+                        </tr>
+                        <tr>
+                            <td>Plastic Silverware</td>
+                            <td><input type="number" class="form-control-sm" style="border: none;" id="silverware" oninput="calculateYears('silverware', 'silverware-year', 100, 1000)"></td>
+                            <td><span id="silverware-year">0</span></td>
+                        </tr>
+                        <tr>
+                            <td>Plastic Stirrers</td>
+                            <td><input type="number" class="form-control-sm" style="border: none;" id="stirrers" oninput="calculateYears('stirrers', 'stirrers-year', 100)"></td>
+                            <td><span id="stirrers-year">0</span></td>
+                        </tr>
+                        <tr>
+                            <td>Food Containers</td>
+                            <td><input type="number" class="form-control-sm" style="border: none;" id="food-containers" oninput="calculateYears('food-containers', 'food-containers-year', 50, 500)"></td>
+                            <td><span id="food-containers-year">0</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table class="table">
+                <tbody>
+                  <tr>
+                    <td>Currently Year Consumption:</td>
+                    <td id="totalYears" style="color: blue;">0</td>
+                  </tr>
+                  </tbody>
+            </table>
+        </div>
+    </div>
+  
+  <script src="latihan3.js"></script>
+</body>
+</html>
